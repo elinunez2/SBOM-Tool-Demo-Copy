@@ -31,8 +31,8 @@ jobs:
           curl -Lo $RUNNER_TEMP/sbom-tool https://github.com/microsoft/sbom-tool/releases/latest/download/sbom-tool-linux-x64
           chmod +x $RUNNER_TEMP/sbom-tool
           $RUNNER_TEMP/sbom-tool generate -b . -bc . -pn Test -pv 1.0.1 -ps Elijah_Nunez -nsb http://workflowtest/ -v Verbose
-          ls /_manifest/spdx_2.2/
-          cat /_manifest/spdx_2.2/manifest.spdx.json
+          ls ./_manifest/spdx_2.2/
+          cat ./_manifest/spdx_2.2/manifest.spdx.json
       # Runs a single command using the runners shell
       - name: CycloneDX Python Generate SBOM
        # You may pin to the exact commit or the version.
